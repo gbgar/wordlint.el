@@ -1,6 +1,7 @@
 Wordlint.el provides an Emacs interface to the Wordlint program
 written in Haskell
-[https://github.com/gbgar/Wordlint](https://github.com/gbgar/Wordlint).
+([https://github.com/gbgar/Wordlint](https://github.com/gbgar/Wordlint)).
+
 The minor mode `wordlint-mode` sets the file-local `compile-command`
 variable to use the `wordlint` program.  The `wordlint` executable
 path and a set of user-set default matching and filtering options may
@@ -25,7 +26,7 @@ Add
 
 	(require 'wordlint)
 
-to your Emacs init file, and activate wordlint-mode manually by
+to your Emacs init file, and activate wordlint-mode by hand
 
 	M-x wordlint-mode RET
 
@@ -37,13 +38,11 @@ or add hooks to your preferred prose-oriented major modes.
 If you wish, use Emacs' built-in customization facilities or
 add something like the following to your Emacs init file:
 
- (setq wordlint-cusom-args "-w 50 --nopunct")
-
-
+	(setq wordlint-cusom-args "-w 50 --nopunct")
 
 #Use
 
-When ready to lint your prose for redundanicies, the command
+Activate `wordlint-mode`, and when ready, run the command
 
 	M-x compile RET
 
